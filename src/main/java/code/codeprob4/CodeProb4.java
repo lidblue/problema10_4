@@ -7,16 +7,16 @@ public class CodeProb4 {
     public static void main(String[] args) throws Exception {
         try {
             BufferedReader f;
-            f = new BufferedReader(new FileReader("C:\\carta.txt"));
+            f = new BufferedReader(new FileReader("carta.txt")); // carta.txt se encuentra en la carpeta del proyecto
             int contCar = 0; // contador de caracteres
             int contPal = 0; // contador de palabras
             int contLinea = 0; // contador de líneas
 
             // leemos del flujo asociado usando el método int read()
-            int c = f.read(); // leemos un carácter
+            int c = f.read(); // leemos un carácter, el metodo read devuelve el caracter en Unicode
 
             while (c != -1) { // mientras no hayamos procesado todo el fichero
-                if ((char) c == ' ') { // suponemos solo un espacio entre palabras
+                if ((char) c == ' ') { // suponemos solo un espacio entre palabras, se hace la conversion de c a char
                     System.out.printf("Se ha encontrado el caracter: %c \n", (char) c);
                     contCar++; //un carácter más
                     contPal++; //una palabra más
